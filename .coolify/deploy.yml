@@ -1,0 +1,63 @@
+# Coolify Deployment Configuration for MyHealthSync360
+# This file contains deployment settings specific to Coolify
+
+# Application Configuration
+name: myhealthsync360
+type: docker
+dockerfile: Dockerfile
+
+# Build Configuration
+build:
+  args:
+    NODE_ENV: production
+  context: .
+  
+# Port Configuration
+ports:
+  - "3000:3000"
+
+# Health Check Configuration
+healthcheck:
+  test: ["CMD", "node", "scripts/health-check.js"]
+  interval: 30s
+  timeout: 10s
+  retries: 3
+  start_period: 40s
+
+# Environment Variables (to be set in Coolify UI)
+# These should be configured in the Coolify dashboard:
+environment:
+  required:
+    - NEXT_PUBLIC_SUPABASE_URL
+    - NEXT_PUBLIC_SUPABASE_ANON_KEY
+    - STRIPE_PUBLISHABLE_KEY
+    - STRIPE_SECRET_KEY
+    - NEXT_PUBLIC_APP_URL
+  optional:
+    - SUPABASE_SERVICE_ROLE_KEY
+    - STRIPE_WEBHOOK_SECRET
+    - DATABASE_URL
+    - NEXTAUTH_SECRET
+    - JWT_SECRET
+
+# Resource Limits (adjust based on your VPS capabilities)
+resources:
+  memory: 1024m
+  cpu: 0.5
+
+# Restart Policy
+restart: unless-stopped
+
+# Volume Mounts (if needed)
+# volumes:
+#   - ./data:/app/data
+
+# Pre-deployment Commands
+pre_deploy:
+  - echo "Preparing MyHealthSync360 for deployment..."
+  - npm ci --only=production
+
+# Post-deployment Commands  
+post_deploy:
+  - echo "MyHealthSync360 deployed successfully!"
+  - npm run health-check 

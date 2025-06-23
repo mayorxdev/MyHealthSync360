@@ -39,12 +39,8 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  // Configure allowed dev origins
-  allowedDevOrigins: ["192.168.1.211"],
-  experimental: {
-    esmExternals: "loose",
-    serverComponentsExternalPackages: ["@supabase/supabase-js"],
-  },
+  // Move serverComponentsExternalPackages to the correct location
+  serverExternalPackages: ["@supabase/supabase-js"],
   webpack: (config, { dev, isServer }) => {
     // Handle module resolution issues
     config.resolve.fallback = {
@@ -95,8 +91,6 @@ const nextConfig: NextConfig = {
   },
   // Disable source maps in development to reduce memory usage
   productionBrowserSourceMaps: false,
-  // Optimize build output
-  swcMinify: true,
 };
 
 export default nextConfig;
