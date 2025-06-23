@@ -1,0 +1,342 @@
+Website Development Prompt for MyHealthSync360
+Overview:
+We are building a modern, professional, mobile-responsive website for MyHealthSync360, a personalized vitamin and supplement subscription service. The brand offers custom daily supplement packs tailored to each user's health goals via an online health quiz. The site should convert visitors into subscribers through clear calls to action, a seamless user experience, and a modern wellness aesthetic.
+
+🔗 Business Details:
+Brand Name: MyHealthSync360 (Placeholder; subject to change)
+
+
+Industry: Health & Wellness / Personalized Nutrition
+
+
+Business Model: Direct-to-consumer subscription (monthly or annual plans)
+
+
+Target Audience:
+
+
+Age: 25–55
+
+
+Health-conscious adults
+
+
+Primarily located in the US, UK, and Canada
+
+
+
+Website Pages & Features:
+1. Home Page
+Hero Section:
+
+
+Headline: “Daily Vitamins, Made for You”
+
+
+CTA Button: “Take the Free Health Quiz”
+
+
+Visual: Glassmorphic overlay on supplement product imagery
+
+
+Trust Indicators:
+
+
+GMP Certified
+
+
+3rd Party Tested
+
+
+Nutritionist Approved
+
+
+Display as badges or icons
+
+
+Benefits Grid (4-column or 2x2 layout):
+
+
+Immunity, Energy, Sleep, Heart Health
+
+
+Each with custom icon + short description
+
+
+Testimonials Section:
+
+
+Carousel or responsive 3-column layout with user photos & quotes
+
+
+"How It Works" Section:
+
+
+3-Step Process:
+
+
+Take the Health Quiz
+
+
+Get Your Personalized Pack
+
+
+Receive Monthly Deliveries
+
+
+
+2. Interactive Health Quiz Page
+Embed a dynamic quiz (Typeform or custom form preferred)
+
+
+Required fields:
+
+
+Age
+
+
+Gender
+
+
+Health Goals
+
+
+Lifestyle habits
+
+
+Diet preferences
+
+
+Medications
+
+
+Allergies
+
+
+Output: Dynamic supplement pack recommendation (shown on next page)
+
+
+
+3. Product Recommendation Page
+Show tailored supplement pack based on quiz inputs:
+
+
+Product Image
+
+
+Short Description
+
+
+Daily Dosage Info
+
+
+CTA: “Add to My Pack”
+
+
+Summary Section:
+
+
+Title: “Your Daily Pack”
+
+
+List of selected supplements
+
+
+Monthly subscription price displayed clearly
+
+
+
+4. Checkout Page
+Choose Plan: Monthly or Annual
+
+
+Secure checkout integrations:
+
+
+Stripe (test API key)
+
+
+PayPal (test sandbox key)
+
+
+Additional Fields:
+
+
+Promo code input
+
+
+Email, shipping address, billing details
+
+
+
+5. Customer Dashboard (Post-Login)
+Key Features:
+
+
+View & modify supplement pack
+
+
+Retake or update health quiz
+
+
+Pause, skip, or cancel subscription
+
+
+View shipping & order history
+
+
+Login/Auth integration (JWT or OAuth recommended)
+
+
+
+6. About Us Page
+Brand Mission & Vision
+
+
+Founder’s Story
+
+
+Team introductions with photos and bios
+
+
+
+7. Blog Page
+Articles on:
+
+
+Nutrition tips
+
+
+Health & wellness education
+
+
+Supplement science
+
+
+SEO-friendly blog layout:
+
+
+Categories
+
+
+Featured image
+
+
+Meta title, description, tags
+
+
+
+8. Contact Page
+Embedded Contact Form
+
+
+Display business email & phone support
+
+
+Include Live Chat Widget (e.g., Tawk.to, Intercom)
+
+
+
+9. Legal Pages
+Include separate, linked legal pages in the footer:
+Privacy Policy
+
+
+Terms of Use
+
+
+Subscription Policy
+
+
+HIPAA / Medical Disclaimer
+
+
+
+🎨 Design & UI Guidelines
+Style: Clean, modern, glassmorphism aesthetic
+
+
+Color Palette:
+
+
+Make if feel natural, like natural green
+
+
+Typography:
+
+
+Use modern sans-serif fonts: Inter, Open Sans, or Poppins
+
+
+Icons: Custom-designed icons for supplement benefits (Immunity, Energy, etc.)
+
+
+Imagery: High-quality lifestyle photography with diverse representation
+
+
+Layout: Section-based scrolling; full-width blocks with generous white space
+
+
+Product Images: Use placeholder supplement product images for now
+
+
+
+🔌 Integrations
+Stripe (Testing API key integration)
+
+
+PayPal (Sandbox API for checkout)
+
+
+Live Chat: Use Tawk.to or Intercom for live user support
+
+
+Analytics: Integrate Google Analytics or Plausible
+
+
+
+🚀 Final Launch Checklist
+Before going live, ensure the following:
+Quiz logic and result rendering tested
+
+
+Payment checkout (Stripe & PayPal) tested with test keys
+
+
+Mobile responsiveness verified (iOS/Android, tablet, desktop)
+
+
+SEO setup: meta titles, descriptions, alt text for all images
+
+
+SSL enabled
+
+
+Custom domain set up: MyHealthSync360.com
+
+
+Site published and analytics running
+
+
+
+🎯 Final Outcome
+A fully functional live website that enables users to:
+Take a dynamic health quiz
+
+
+Get personalized supplement recommendations
+
+
+Subscribe with a secure checkout
+
+
+Manage their subscription and health profile post-login
+
+
+Tech stack:
+Next js
+Tailwind css
+Postgress
+Stripe API
+Paypal API 
+
